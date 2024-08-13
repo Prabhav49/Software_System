@@ -6,32 +6,27 @@ Close the file when end of file is reached.
 */
 
 #include <stdio.h>
+#include <fcntl.h>
+#include <stdio.h>
 
-#define MAX_LINE_LENGTH 1024
 
 int main() {
-    FILE *file;
-    char line[MAX_LINE_LENGTH];
+
+    char line[1024];
+	int fd;
+    
+    fd = open("8example.txt", O_RDONLY);
+    
+    while(read(fd,line,1)){
+	if(line[0] == '\n')
+		getchar();
+	else
+	printf("%c", line[0]);
+
+}
 
     
-    file = fopen("8example.txt", "r");
-    if (file == NULL) {
-        perror("Error opening file");
-        return 1;
-    }
-
-    
-    while (fgets(line, sizeof(line), file) != NULL) {
-        printf("%s", line);
-    }
-
-    
-    if (ferror(file)) {
-        perror("Error reading from file");
-    }
-
-    
-    fclose(file);
+    close(fd);
 
     return 0;
 }
