@@ -13,8 +13,8 @@ Problem Statement :Write a program to copy file1 into file2 ($cp file1 file2).
 int main(int argc, char *argv[]) {
 	int sourceFd = open(argv[1], O_RDONLY);
 	int destFd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0744);
-    char buffer[1024];
-    ssize_t bytesRead;
+   	 char buffer[1024];
+   	 ssize_t bytesRead;
     while ((bytesRead = read(sourceFd, buffer, 1024)) > 0) {
         if (write(destFd, buffer, bytesRead) == -1) {
             perror("Error writing to destination file");

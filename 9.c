@@ -38,18 +38,18 @@ void print_file_info(const char *filename) {
     printf("Block size: %ld bytes\n", (long)fileStat.st_blksize);
     printf("Number of blocks: %ld\n", (long)fileStat.st_blocks);
 
-    // Convert and print time information
+   
     char timeBuf[64];
     
-    // Time of last access
+   
     strftime(timeBuf, sizeof(timeBuf), "%Y-%m-%d %H:%M:%S", localtime(&fileStat.st_atime));
     printf("Time of last access: %s\n", timeBuf);
 
-    // Time of last modification
+   
     strftime(timeBuf, sizeof(timeBuf), "%Y-%m-%d %H:%M:%S", localtime(&fileStat.st_mtime));
     printf("Time of last modification: %s\n", timeBuf);
 
-    // Time of last status change
+   
     strftime(timeBuf, sizeof(timeBuf), "%Y-%m-%d %H:%M:%S", localtime(&fileStat.st_ctime));
     printf("Time of last status change: %s\n", timeBuf);
 }
