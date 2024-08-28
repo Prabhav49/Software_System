@@ -1,0 +1,44 @@
+/*
+Name : Prabhav Pandey
+Enroll : MT2024115
+Problem Statement  : Write a program, open a file, call fork, and then write to the file by both the child as well as the
+parent processes. Check output of the file.
+
+Output : 
+*/
+
+#include <stdio.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <stdlib.h>
+
+int main() {
+    int fd = open("22_output.txt", O_WRONLY | O_CREAT | O_APPEND, 0644);
+    if (fd < 0) {
+        perror("Failed to open file");
+        return 1;
+    }
+
+    pid_t pid = fork();
+    if (pid < 0) {
+        perror("Fork failed");
+        return 1;
+    }
+    //executed by the child process only.
+    if (pid == 0) {
+        const char *child_msg = "Child process writing to file\n";
+        write(fd, child_msg, sizeof("Child process writing to file\n") - 1);
+    }
+    // by parent process only
+    else {
+        const char *parent_msg = "Parent process writing to file\n";
+        write(fd, parent_msg, sizeof("Parent process writing to file\n") - 1);
+    }
+
+    // Close the file
+    close(fd);
+    
+    return 0;
+}

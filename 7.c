@@ -3,10 +3,10 @@ Name : Prabhav Pandey
 Enroll : MT2024115
 Problem Statement :Write a program to copy file1 into file2 ($cp file1 file2). 
 */
-#include <fcntl.h>   
-#include <unistd.h>  
-#include <stdio.h>   
-#include <stdlib.h>  
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #define BUFFER_SIZE 1024
 

@@ -41,6 +41,6 @@ int main(int argc, char *argv[]) {
     } else {
         printf("%s: unknown file type\n", argv[1]);
     }
-
+	
     return 0;
 }
