@@ -32,9 +32,8 @@ void read_and_increment_ticket(const char *file_path) {
             if (len != -1) {
                 buffer[len] = '\0';  
                 int ticket_number = atoi(buffer);
-                printf("Current ticket number: %d\n", ticket_number);
-                
-                 printf("Press Enter to increment the ticket number...\n");
+                printf("Current ticket number: %d\n", ticket_number); 
+                 printf("Press Enter to book the ticket...\n");
                 getchar();
 
                 ticket_number++; 
@@ -54,12 +53,10 @@ void read_and_increment_ticket(const char *file_path) {
 }
 
 int main() {
-    const char *file_path = "/home/prabhav49/IIITB/First Sem/Software_System/Programs_Labs/17_example.txt";  // Change this to your file path
-    
+    const char *file_path = "/home/prabhav49/IIITB/First Sem/Software_System/Programs_Labs/17_example.txt";
        initialize_ticket_number(file_path);
-   	printf("Waiting for Bokking !!\n"); 
+   	printf("Waiting for Bokking !!\n");
        read_and_increment_ticket(file_path);
-    
     return 0;
 }
 
