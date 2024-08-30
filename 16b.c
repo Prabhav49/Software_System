@@ -10,14 +10,11 @@ b. Implement read lock
 #include <unistd.h>
 #include <fcntl.h>
 #include <string.h>
-#include <pthread.h>
-
-#define NUM_READERS 1  // Change this to 1 to create only one reader
 
 void apply_read_lock(int fd) {
     struct flock lock;
     memset(&lock, 0, sizeof(lock));
-    lock.l_type = F_RDLCK; 
+    lock.l_type = F_RDLCK;  // Read lock
     lock.l_whence = SEEK_SET;
     lock.l_start = 0;
     lock.l_len = 0;
@@ -32,7 +29,7 @@ void apply_read_lock(int fd) {
 void release_read_lock(int fd) {
     struct flock lock;
     memset(&lock, 0, sizeof(lock));
-    lock.l_type = F_UNLCK; 
+    lock.l_type = F_UNLCK;
     lock.l_whence = SEEK_SET;
     lock.l_start = 0;
     lock.l_len = 0;
@@ -43,40 +40,23 @@ void release_read_lock(int fd) {
     }
 }
 
-void *reader(void *arg) {
-    int fd = *(int *)arg;
-
-    printf("Reader thread started.\n");
-    apply_read_lock(fd);
-    printf("Reader inside the critical section.\n");
-
-    getchar();
-
-    printf("Reader done.\n");
-    release_read_lock(fd);
-
-    return NULL;
-}
-
 int main() {
+    // Open the file
     int fd = open("testfile.txt", O_RDWR | O_CREAT, 0666);
     if (fd == -1) {
         perror("Open failed");
         return EXIT_FAILURE;
     }
 
-    pthread_t thread;
+    printf("Reader is Waiting.\n");
+    apply_read_lock(fd);
+    printf("Reader inside the critical section.\n");
 
- 
-    if (pthread_create(&thread, NULL, reader, &fd) != 0) {
-        perror("Thread creation failed");
-        close(fd);
-        return EXIT_FAILURE;
-    }
-
-
-    pthread_join(thread, NULL);
-
+    getchar();
+    printf("I am out of the Critical Section...\n");
+    release_read_lock(fd);
     close(fd);
+
     return 0;
 }
+

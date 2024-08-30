@@ -42,7 +42,7 @@ void release_write_lock(int fd) {
 int main() {
     int fd = open("testfile.txt", O_RDWR | O_CREAT, 0666);
     apply_write_lock(fd);
-    printf("I am inside the critical section. Press Enter to release the lock...\n");
+    printf("Writer is inside the critical section. Press Enter to release the lock...\n");
 
     getchar();
 

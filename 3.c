@@ -8,7 +8,7 @@ Problem Statement : Write a program to create a file and print the file descript
 #include <unistd.h> // For close()
 
 int main() {
-    const char *filename = "2ndProg.txt";
+    const char *filename = "3rdProg.txt";
     int fd = creat(filename, 0666);
 
     if (fd == -1) {
