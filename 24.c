@@ -1,14 +1,17 @@
 /*
-Name : Prabhav Pandey
-Enroll : MT2024115
-Problem Statement : Write a program to create an orphan process.
+============================================================================
+Name : 24.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to create an orphan process.
 
 Output :  Parent process (PID: 5143) is exiting...
 	  Child process (PID: 5144) is now orphaned and adopted by init.
 	  Child's parent PID after becoming orphan: 1667
 
-
+======================================
 */
+
 
 #include <stdio.h>
 #include <stdlib.h>

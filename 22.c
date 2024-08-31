@@ -1,11 +1,20 @@
 /*
-Name : Prabhav Pandey
-Enroll : MT2024115
-Problem Statement  : Write a program, open a file, call fork, and then write to the file by both the child as well as the
+============================================================================
+Name : 22.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program, open a file, call fork, and then write to the file by both the child as well as the
 parent processes. Check output of the file.
 
-Output : 
+Output : (In 22_output.txt) Parent process writing to file
+                            Child process writing to file
+                            Parent process writing to file
+                            Child process writing to file
+
+======================================
 */
+
+
 
 #include <stdio.h>
 #include <unistd.h>

@@ -1,10 +1,16 @@
 /*
-Name : Prabhav Pandey
-Enroll : MT2024115
-Problem : 1. Create the following types of a files using (i) shell command (ii) system call
+============================================================================
+Name : 1b.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : reate the following types of a files using (i) shell command (ii) system call
 b. hard link (link system call)
 
+
+Output : -rw-rw-r-- 1 prabhav49 prabhav49    0 Aug  8 09:00 hardlnk_demo
+============================================================================
 */
+
 #include <unistd.h>
 #include <stdio.h>
 

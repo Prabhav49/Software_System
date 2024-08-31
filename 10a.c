@@ -1,9 +1,17 @@
 /*
-Name : Prabhav Pandey
-Enroll : MT2024115
-Problem Statement : Write a program to open a file with read write mode, write 10 bytes, move the file pointer by 10
+============================================================================
+Name : 10a.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to open a file with read write mode, write 10 bytes, move the file pointer by 10
 bytes (use lseek) and write again 10 bytes.
 a. check the return value of lseek
+
+output : First write: 10 bytes written
+            File pointer moved to offset: 20
+            Second write: 10 bytes written
+            The  value of seek is : 20
+============================================================================
 */
 
 #include <fcntl.h>   

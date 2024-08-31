@@ -1,13 +1,15 @@
 /*
-Name : Prabhav Pandey
-Enroll : MT2024115
-Problem Statement : Write a program to find out time taken to execute getpid system call. Use time stamp counter.
+============================================================================
+Name : 19.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to find out time taken to execute getpid system call. Use time stamp counter.
 
-Output : PID: 4816
-Time taken by getpid() system call: 19692 clock cycles
+output :  PID: 16126
+Time taken by getpid() system call: 1844.976077 nano seconds
 
+======================================
 */
-
 #include <stdio.h>
 #include <unistd.h>
 
@@ -18,13 +20,13 @@ static inline unsigned long long rdtsc() {
 }
 
 int main() {
-    unsigned long long start, end;
+    double start, end;
     start = rdtsc();
     pid_t pid = getpid();
     end = rdtsc();
 
     printf("PID: %d\n", pid);
-    printf("Time taken by getpid() system call: %llu clock cycles\n", end - start);
+    printf("Time taken by getpid() system call: %lf nano seconds\n", (end - start)/2.09);
     
     return 0;
 }

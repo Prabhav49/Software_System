@@ -1,7 +1,9 @@
 /*
-Name  :Prabhav Pandey
-Enroll : MT2024115
-Problem Statement : Write a program to create a Zombie state of the running program.
+============================================================================
+Name : 23.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to create a Zombie state of the running program.
 
 Output :Parent process: PID = 6200
 	Child process has exited, but parent is not waiting.
@@ -11,8 +13,10 @@ Output :Parent process: PID = 6200
 	prabhav+    6201  0.0  0.0      0     0 pts/0    Z+   11:36   0:00 [a.out] <defunct>
 	prabhav+    6222  0.0  0.0   9072  2304 pts/1    S+   11:36   0:00 grep --color=auto Z
 
- 
+======================================
 */
+
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>

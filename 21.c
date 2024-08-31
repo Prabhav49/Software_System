@@ -1,12 +1,18 @@
 /*
-Name : Prabhav Pandey
-Enroll : MT2024115
-Problem Statement : Write a program, call fork and print the parent and child process id.
+============================================================================
+Name : 21.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program, call fork and print the parent and child process id.
 
 Output :Parent process: PID = 5385, Child PID = 5386
 	Child process: PID = 5386, Parent PID = 5385
 
+======================================
 */
+
+
+
 #include <stdio.h>
 #include <unistd.h>
 

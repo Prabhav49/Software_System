@@ -1,21 +1,22 @@
 /*
-Name : Prabhav Pandey
-Enroll  :MT2024115
-Problem Statement : Write a program to get scheduling policy and modify the scheduling policy (SCHED_FIFO,
+============================================================================
+Name : 28.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to get scheduling policy and modify the scheduling policy (SCHED_FIFO,
 SCHED_RR).
 
 Output: Current policy:
-Current scheduling policy: SCHED_OTHER
+        Current scheduling policy: SCHED_OTHER
 
-Policy changed to SCHED_FIFO with priority 10
-New policy:
-Current scheduling policy: SCHED_FIFO
+        Policy changed to SCHED_FIFO with priority 10
+        New policy:
+        Current scheduling policy: SCHED_FIFO
 
-Policy changed to SCHED_RR with priority 10
-New policy:
-Current scheduling policy: SCHED_RR
- 
-
+        Policy changed to SCHED_RR with priority 10
+        New policy:
+        Current scheduling policy: SCHED_RR
+======================================
 */
 #include <stdio.h>
 #include <stdlib.h>

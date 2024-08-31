@@ -4,3 +4,6 @@ Data from duplicated FD
 Data from original FD
 Data from duplicated FD
 Data from duplicated FD
+Data from original FD
+Data from duplicated FD
+Data from duplicated FD

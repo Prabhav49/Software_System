@@ -1,17 +1,19 @@
 /*
-Name : Prabhav Pandey
-Enroll : MT2024115
-Problem Statement :Write a program to get maximum and minimum real time priority.
+============================================================================
+Name : 28.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to get maximum and minimum real time priority.
 
 Output :Real-time priorities for SCHED_FIFO:
-	Maximum priority: 99
-	Minimum priority: 1
+        Maximum priority: 99
+        Minimum priority: 1
 
-	Real-time priorities for SCHED_RR:
-	Maximum priority: 99
-	Minimum priority: 1
+        Real-time priorities for SCHED_RR:
+        Maximum priority: 99
+        Minimum priority: 1
  
-
+======================================
 */
 #include <stdio.h>
 #include <stdlib.h>

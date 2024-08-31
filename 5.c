@@ -1,10 +1,20 @@
 /*
-Name : Prabhav Pandey
-Enroll : MT2024115
-Problem Statement : Write a program to create five new files with infinite loop. Execute the program in the background
+============================================================================
+Name : 5.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to create five new files with infinite loop. Execute the program in the background
 and check the file descriptor table at /proc/pid/fd.
-*/
 
+Output :-  cd /proc/pid/fd :  0  1  2  3  4  5  6  7
+            terminal : File '5file1.txt' created with file descriptor: 3
+                        File '5file2.txt' created with file descriptor: 4
+                        File '5file3.txt' created with file descriptor: 5
+                        File '5file4.txt' created with file descriptor: 6
+                        File '5file5.txt' created with file descriptor: 7
+
+============================================================================
+*/
 #include <fcntl.h>   // For open()
 #include <stdio.h>   // For printf(), perror()
 #include <stdlib.h>  // For exit()

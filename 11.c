@@ -1,12 +1,19 @@
 /*
-Name : Prabhav Pandey
-Enroll : MT2024115
-Problem Statement : Write a program to open a file, duplicate the file descriptor and append the file with both the
+============================================================================
+Name : 11.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to open a file, duplicate the file descriptor and append the file with both the
 descriptors and check whether the file is updated properly or not.
 a. use dup
 b. use dup2
 c. use fcntl
+output :Data from original FD
+        Data from duplicated FD
+        Data from duplicated FD
+============================================================================
 */
+
 
 #include <fcntl.h>
 #include <unistd.h>

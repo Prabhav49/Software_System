@@ -4,6 +4,19 @@ Enroll : MT2024115
 Problem Statemet : Write a program to take input from STDIN and display on STDOUT. Use only read/write system calls
 */
 
+/*
+============================================================================
+Name : 6.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to take input from STDIN and display on STDOUT. Use only read/write system calls
+
+Output :-  HII PRABHAV PANDEY
+HII PRABHAV PANDEY
+
+============================================================================
+*/
+
 #include <unistd.h>  
 #include <stdio.h>   
 

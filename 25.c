@@ -1,10 +1,20 @@
 /*
-Name : Prabhav Pandey
-Enroll : MT2024115
-Problem Statement :Write a program to create three child processes. The parent should wait for a particular child (use
+============================================================================
+Name : 25.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to create three child processes. The parent should wait for a particular child (use
 waitpid system call). 
 
-Output :
+Output : First child (PID: 16666) created.
+            Second child (PID: 16667) created.
+            Parent waiting for the second child (PID: 16667)...
+            Third child (PID: 16668) created.
+            Second child (PID: 16667) terminated.
+            Parent process completed.
+
+
+======================================
 */
 #include <stdio.h>
 #include <stdlib.h>

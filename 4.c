@@ -1,7 +1,12 @@
 /*
-Name : Prabhav Pandey
-Enroll :MT2024115
-Problem Statement : Write a program to open an existing file with read write mode. Try O_EXCL flag also.
+============================================================================
+Name : 4.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to open an existing file with read write mode. Try O_EXCL flag also.
+
+Output :-   File '3rdProg.txt' opened with O_EXCL with file descriptor: 3
+============================================================================
 */
 
 #include <fcntl.h>  

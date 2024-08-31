@@ -1,7 +1,17 @@
 /*
-Name : Prabhav Pandey
-Enroll : MT2024115
-Problem Statement : write a program to simulate online ticket reservation
+============================================================================
+Name : 17_tkt_num.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : write a program to simulate online ticket reservation
+
+output :  Waiting for Bokking !!
+        Current ticket number: 17
+        Press Enter to book the ticket...
+
+        New ticket number: 18
+        Booking done.
+======================================
 */
 
 #include <stdio.h>

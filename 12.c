@@ -1,7 +1,14 @@
 /*
-Name : Prabhav Pandey
-Enroll  :MT2024115
-Problem Statement : Write a program to find out the opening mode of a file. Use fcntl.
+============================================================================
+Name : 12.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : rite a program to find out the opening mode of a file. Use fcntl.
+output :/a.out 17_example.txt 
+        File opening mode:
+        - Read only
+
+============================================================================
 */
 
 #include <fcntl.h>  

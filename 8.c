@@ -1,8 +1,12 @@
 /*
-Name :Prabhav Pandey
-Enrol : MT2024115
-Problem Statement : Write a program to open a file in read only mode, read line by line and display each line as it is read.
+============================================================================
+Name : 8.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to open a file in read only mode, read line by line and display each line as it is read.
 Close the file when end of file is reached.
+Output :-  
+============================================================================
 */
 
 #include <stdio.h>

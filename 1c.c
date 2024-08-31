@@ -1,8 +1,14 @@
 /*
-Name : Prabhav Pandey
-Enroll. : MT2024115
-Problem Statement : create myfifo using both shell command and script.
+============================================================================
+Name : 1c.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : create myfifo using both shell command and script.
+
+Output :-rw-rw-r-- 1 prabhav49 prabhav49    0 Aug  8 09:00 hardlnk_demo
+============================================================================
 */
+
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>

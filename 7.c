@@ -1,7 +1,11 @@
 /*
-Name : Prabhav Pandey
-Enroll : MT2024115
-Problem Statement :Write a program to copy file1 into file2 ($cp file1 file2). 
+============================================================================
+Name : 7.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to copy file1 into file2 ($cp file1 file2).
+Output :-  
+============================================================================
 */
 #include <fcntl.h>
 #include <unistd.h>

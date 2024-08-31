@@ -1,17 +1,37 @@
 /*
 Name : Prabhav Pandey
 Enroll : MT2024115
-Problem Statement : Write a program to print the following information about a given file.
-a. inode
-b. number of hard links
-c. uid
-d. gid
-e. size
-f. block size
-g. number of blocks
-h. time of last access
-i. time of last modification
-j. time of last change
+Problem Statement : 
+*/
+/*
+============================================================================
+Name : 8.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to print the following information about a given file.
+                a. inode
+                b. number of hard links
+                c. uid
+                d. gid
+                e. size
+                f. block size
+                g. number of blocks
+                h. time of last access
+                i. time of last modification
+                j. time of last change
+
+output : File: testfile.txt
+        Inode: 7478350
+        Number of hard links: 1
+        UID: 1000
+        GID: 1000
+        Size: 0 bytes
+        Block size: 4096 bytes
+        Number of blocks: 0
+        Time of last access: 2024-08-15 18:18:10
+        Time of last modification: 2024-08-15 18:18:10
+        Time of last status change: 2024-08-15 18:18:10
+============================================================================
 */
 
 #include <stdio.h>

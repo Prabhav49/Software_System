@@ -1,13 +1,17 @@
 /*
-Name : Prabhav Pandey
-Enroll : MT2024115
-Probelm Statement :Find out the priority of your running program. Modify the priority with nice command.
+============================================================================
+Name : 20.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Find out the priority of your running program. Modify the priority with nice command.
 
 Output :Current Priority of PID 5207: 0
 Priority successfully changed by 5
 Modified Priority of PID 5207: 5
- 
+
+======================================
 */
+
 
 #include <stdio.h>
 #include <unistd.h>

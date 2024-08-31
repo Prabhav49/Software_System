@@ -1,8 +1,14 @@
 /*
-Name : Prabhav Pandey
-Enroll : MT2024115
-Problem Statement : Write a program to create a file and print the file descriptor value. Use creat ( ) system call
+============================================================================
+Name : 3.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to create a file and print the file descriptor value. Use creat ( ) system call 
+
+Output :-   File '3rdProg.txt' created successfully with file descriptor: 3
+============================================================================
 */
+
 #include <fcntl.h>  // For creat()
 #include <stdio.h>  // For printf()
 #include <unistd.h> // For close()

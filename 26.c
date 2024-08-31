@@ -1,9 +1,14 @@
 /*
-Name : Prabhav Pandey
-Enroll : MT2024115
-Problem Statement :Write a program to execute an executable program.
+============================================================================
+Name : 26.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to execute an executable program.
 a. use some executable program
 b. pass some input to an executable program. (for example execute an executable of $./a.out name)
+
+
+======================================
 */
 
 #include <stdio.h>
@@ -11,12 +16,7 @@ b. pass some input to an executable program. (for example execute an executable 
 #include <unistd.h>
 
 int main() {
-    char *args[] = {"./a.out", "John", NULL};  // Arguments to be passed to the executable
-
-    printf("Executing ./a.out with argument: John\n");
-    execvp(args[0], args);
-
-    printf("Failed to execute ./a.out\n");
-
+    execl("./a.out", "./a.out", NULL);
+    printf("Some error occured");
     return 0;
 }

@@ -1,8 +1,19 @@
 /*
-Name : Prabhav Pandey
-ENroll : MT2024115
-Problem Statement : Write a program to perform mandatory locking.
+============================================================================
+Name : 16a.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to perform mandatory locking.
 a. Implement write 
+
+output : Writer Side : I am waiting...
+                        Writer is inside the critical section. Press Enter to release the lock...
+
+        Reader Side : Reader is Waiting.
+                        Reader waiting...
+
+
+============================================================================
 */
 #include <stdio.h>
 #include <stdlib.h>

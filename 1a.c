@@ -1,17 +1,19 @@
-/*
-Name : Prabhav Pandey
-Enrollment Number : MT2024115
-Problem Statement : Create the following types of a files using (i) shell command (ii) system call
-a. soft link (symlink system call)
-*/
 
+/*
+============================================================================
+Name : 1a.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Create the following types of a files using (i) shell command (ii) system call
+            a. soft link (symlink system call)
+============================================================================
+*/
 #include <unistd.h>
 #include <stdio.h>
 
 int main(void) {
-    const char *target = "./1newFile"; // The file you want to link to
-    const char *linkname = "sftlnk_demo"; // The name of the symlink to create
-
+    const char *target = "./1newFile"; 
+    const char *linkname = "sftlnk_demo";
     // Create a symbolic link
     int result = symlink(target, linkname);
 

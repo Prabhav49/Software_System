@@ -5,6 +5,26 @@ Problem Statement : Write a program to wait for a STDIN for 10 seconds using sel
 verify whether the data is available within 10 seconds or not (check in $man 2 select).
 */
 
+/*
+============================================================================
+Name : 13.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to wait for a STDIN for 10 seconds using select. Write a proper print statement to
+verify whether the data is available within 10 seconds or not (check in $man 2 select).
+
+output :Waiting for input on STDIN for 10 seconds...
+        Hi
+        Data is available now.
+
+        Waiting for input on STDIN for 10 seconds...
+        No data within 10 seconds.
+
+
+
+============================================================================
+*/
+
 
 #include <stdio.h>
 #include <stdlib.h>
