@@ -22,11 +22,11 @@ output :  Reader Side : Reader is Waiting.
 
 void apply_read_lock(int fd) {
     struct flock lock;
-    memset(&lock, 0, sizeof(lock));
-    lock.l_type = F_RDLCK;  // Read lock
+    lock.l_type = F_WRLCK;
     lock.l_whence = SEEK_SET;
     lock.l_start = 0;
     lock.l_len = 0;
+    lock.l_pid = getpid(); 
 
     printf("Reader waiting...\n");
     if (fcntl(fd, F_SETLKW, &lock) == -1) {
@@ -37,11 +37,11 @@ void apply_read_lock(int fd) {
 
 void release_read_lock(int fd) {
     struct flock lock;
-    memset(&lock, 0, sizeof(lock));
     lock.l_type = F_UNLCK;
     lock.l_whence = SEEK_SET;
     lock.l_start = 0;
     lock.l_len = 0;
+    lock.l_pid = getpid(); 
 
     if (fcntl(fd, F_SETLKW, &lock) == -1) {
         perror("Unlock failed");

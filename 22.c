@@ -35,18 +35,15 @@ int main() {
         perror("Fork failed");
         return 1;
     }
-    //executed by the child process only.
     if (pid == 0) {
         const char *child_msg = "Child process writing to file\n";
         write(fd, child_msg, sizeof("Child process writing to file\n") - 1);
     }
-    // by parent process only
+
     else {
         const char *parent_msg = "Parent process writing to file\n";
         write(fd, parent_msg, sizeof("Parent process writing to file\n") - 1);
     }
-
-    // Close the file
     close(fd);
     
     return 0;

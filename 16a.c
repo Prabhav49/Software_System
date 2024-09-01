@@ -23,11 +23,11 @@ output : Writer Side : I am waiting...
 
 void apply_write_lock(int fd) {
     struct flock lock;
-    memset(&lock, 0, sizeof(lock));
     lock.l_type = F_WRLCK;
     lock.l_whence = SEEK_SET;
     lock.l_start = 0;
     lock.l_len = 0;
+    lock.l_pid = getpid(); 
 
     printf("I am waiting...\n");
     if (fcntl(fd, F_SETLKW, &lock) == -1) {
@@ -38,13 +38,13 @@ void apply_write_lock(int fd) {
 
 void release_write_lock(int fd) {
     struct flock lock;
-    memset(&lock, 0, sizeof(lock));
-    lock.l_type = F_UNLCK;
+     lock.l_type = F_UNLCK;
     lock.l_whence = SEEK_SET;
     lock.l_start = 0;
     lock.l_len = 0;
+    lock.l_pid = getpid(); 
 
-    if (fcntl(fd, F_SETLKW, &lock) == -1) {
+    if (fcntl(fd, F_SETLK, &lock) == -1) {
         perror("Unlock failed");
         exit(EXIT_FAILURE);
     }

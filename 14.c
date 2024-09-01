@@ -1,12 +1,4 @@
 /*
-Name : Prabhav Pandey
-Enroll : MT2024115
-Problem Statement : Write a program to find the type of a file.
-a. Input should be taken from command line.
-b. program should be able to identify any type of a file.
-*/
-
-/*
 ============================================================================
 Name : 14.c
 Author : Prabhav Pandey

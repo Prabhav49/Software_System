@@ -6,8 +6,12 @@ Author : Prabhav Pandey
 Enrollment Number : MT2024115
 Description : Create the following types of a files using (i) shell command (ii) system call
             a. soft link (symlink system call)
+
+Output : lrwxrwxrwx 1 prabhav49 prabhav49   10 Aug 12 15:57 sftlnk_demo -> ./1newFile
 ============================================================================
 */
+
+
 #include <unistd.h>
 #include <stdio.h>
 

@@ -16,7 +16,8 @@ b. pass some input to an executable program. (for example execute an executable 
 #include <unistd.h>
 
 int main() {
-    execl("./a.out", "./a.out", NULL);
+    printf("Prabhav pandey\n");
+    execl("/bin/ls", "ls","-l", NULL);
     printf("Some error occured");
     return 0;
 }

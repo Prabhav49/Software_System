@@ -5,7 +5,7 @@ Author : Prabhav Pandey
 Enrollment Number : MT2024115
 Description : write a program to simulate online ticket reservation
 
-output :  Waiting for Bokking !!
+output : Waiting for Bokking !!
         Current ticket number: 17
         Press Enter to book the ticket...
 
@@ -64,9 +64,9 @@ void read_and_increment_ticket(const char *file_path) {
 
 int main() {
     const char *file_path = "/home/prabhav49/IIITB/First Sem/Software_System/Programs_Labs/17_example.txt";
-       initialize_ticket_number(file_path);
+    initialize_ticket_number(file_path);
    	printf("Waiting for Bokking !!\n");
-       read_and_increment_ticket(file_path);
+    read_and_increment_ticket(file_path);
     return 0;
 }
 

@@ -1,11 +1,6 @@
 /*
-Name : Prabhav Pandey
-Enroll : MT2024115
-Problem Statement : 
-*/
-/*
 ============================================================================
-Name : 8.c
+Name : 9.c
 Author : Prabhav Pandey
 Enrollment Number : MT2024115
 Description : Write a program to print the following information about a given file.

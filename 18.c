@@ -65,7 +65,7 @@ int main() {
     lseek(fd, lock.l_start, SEEK_SET);
     read(fd, &db, sizeof(db));
 
-   
+
     printf("Current Ticket Number: %d\n", db.ticket_count);
 
     db.ticket_count++;
@@ -84,7 +84,6 @@ int main() {
     printf("Booked\n");
     printf("Your Ticket Number is: %d\n", db.ticket_count);
 
-    // Close the file
     close(fd);
 
     return 0;

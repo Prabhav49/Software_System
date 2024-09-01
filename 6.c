@@ -1,10 +1,4 @@
 /*
-Name :Prabhav Pandey 
-Enroll : MT2024115
-Problem Statemet : Write a program to take input from STDIN and display on STDOUT. Use only read/write system calls
-*/
-
-/*
 ============================================================================
 Name : 6.c
 Author : Prabhav Pandey

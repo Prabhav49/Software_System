@@ -43,7 +43,7 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
-    fd_dup2 = dup2(fd, fd + 1); // fd + 1 to avoid overlap with original fd
+    fd_dup2 = dup2(fd, fd + 1);
     if (fd_dup2 == -1) {
         perror("Error duplicating file descriptor using dup2");
     }
