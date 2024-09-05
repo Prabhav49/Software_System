@@ -21,52 +21,58 @@ output : Waiting for Bokking !!
 #include <stdlib.h>
 #include <string.h>
 
-
-void initialize_ticket_number(const char *file_path) {
-    int fd = open(file_path, O_WRONLY | O_CREAT | O_EXCL, 0644);
-    if (fd != -1) {
-
-        char buffer[20];
-        snprintf(buffer, sizeof(buffer), "%d", 1);
-        write(fd, buffer, strlen(buffer));
-        close(fd);
-    }
-}
-
-void read_and_increment_ticket(const char *file_path) {
-    int fd = open(file_path, O_RDWR);
-    if (fd != -1) {
-        if (flock(fd, LOCK_EX) != -1) {
-            char buffer[20];
-            ssize_t len = read(fd, buffer, sizeof(buffer) - 1);
-            if (len != -1) {
-                buffer[len] = '\0';  
-                int ticket_number = atoi(buffer);
-                printf("Current ticket number: %d\n", ticket_number); 
-                 printf("Press Enter to book the ticket...\n");
-                getchar();
-
-                ticket_number++; 
-
-                lseek(fd, 0, SEEK_SET); 
-                snprintf(buffer, sizeof(buffer), "%d", ticket_number);
-                write(fd, buffer, strlen(buffer));
-
-                printf("New ticket number: %d\n", ticket_number);
-                printf("Booking done.\n");
-
-                flock(fd, LOCK_UN); 
-            }
-        }
-        close(fd);
-    }
-}
-
 int main() {
-    const char *file_path = "/home/prabhav49/IIITB/First Sem/Software_System/Programs_Labs/17_example.txt";
-    initialize_ticket_number(file_path);
-   	printf("Waiting for Bokking !!\n");
-    read_and_increment_ticket(file_path);
+
+    struct {
+        int ticket_count;
+    } db;
+
+    int fd;
+    fd = open("17_example.txt", O_RDWR);
+    if (fd == -1) {
+        perror("Error opening file");
+        return 1;
+    }
+
+    printf("Waiting for another user to complete their booking...\n");
+
+    struct flock lock;
+    lock.l_type = F_WRLCK;  
+    lock.l_whence = SEEK_SET;  
+    lock.l_start = 0;        
+    lock.l_len = 0;         
+    lock.l_pid = getpid();      
+
+    if (fcntl(fd, F_SETLKW, &lock) == -1) {
+        perror("Failed to acquire lock");
+        close(fd);
+        return 1;
+    }
+
+    lseek(fd, 0, SEEK_SET);
+    read(fd, &db, sizeof(db));
+
+    printf("Current Ticket Number: %d\n", db.ticket_count);
+    db.ticket_count++;
+
+    lseek(fd, 0, SEEK_SET);
+    write(fd, &db, sizeof(db));
+    fsync(fd);
+
+    printf("To Book Ticket, Press Enter...\n");
+    getchar();
+
+    lock.l_type = F_UNLCK; 
+    if (fcntl(fd, F_SETLK, &lock) == -1) {
+        perror("Failed to unlock file");
+        close(fd);
+        return 1;
+    }
+    printf("Booked\n");
+    printf("Your Ticket Number is: %d\n", db.ticket_count);
+
+    close(fd); 
+
     return 0;
 }
 
