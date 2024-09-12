@@ -1,3 +1,23 @@
+/*
+============================================================================
+Name : 2.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to print the system resource limits. Use getrlimit system call.
+
+output : Resource: 9
+    Soft limit: -1
+    Hard limit: -1
+Resource: 4
+    Soft limit: 0
+    Hard limit: -1
+Resource: 0
+    Soft limit: -1
+    Hard limit: -1................
+
+============================================================================
+*/
+
 #include <stdio.h>
 #include <sys/resource.h>
 

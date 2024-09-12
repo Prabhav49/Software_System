@@ -1,3 +1,18 @@
+/*
+============================================================================
+Name : 6.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a simple program to create three threads.
+
+output : Thread 1 is running
+        Thread 2 is running
+        Thread 3 is running
+        All threads have finished
+
+============================================================================
+*/
+
 #include <stdio.h>
 #include <unistd.h>
 #include <pthread.h>

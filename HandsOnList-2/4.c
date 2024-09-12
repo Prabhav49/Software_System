@@ -1,3 +1,16 @@
+/*
+============================================================================
+Name : 4.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to measure how much time is taken to execute 100 getppid ( )
+              system call. Use time stamp counter.
+
+output : CElapsed time: 53540.67 ns
+
+============================================================================
+*/
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdint.h>

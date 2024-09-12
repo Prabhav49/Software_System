@@ -1,3 +1,16 @@
+/*
+============================================================================
+Name : 3.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a program to set (any one) system resource limit. Use setrlimit system call.
+
+output : Current file size limit: -1 bytes
+         New file size limit: 64 MB
+
+============================================================================
+*/
+
 #include <stdio.h>
 #include <sys/resource.h>
 #include <limits.h>

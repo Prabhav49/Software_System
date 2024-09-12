@@ -1,3 +1,16 @@
+/*
+============================================================================
+Name : 1c.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a separate program (for each time domain) to set a interval timer in 10sec and
+                10micro second
+                a. ITIMER_PROF
+output : ITIMER_PROF Timer expired!
+
+============================================================================
+*/
+
 #include <stdio.h>
 #include <sys/time.h>
 #include <signal.h>

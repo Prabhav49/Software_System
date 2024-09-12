@@ -1,3 +1,17 @@
+/*
+============================================================================
+Name : 7.c
+Author : Prabhav Pandey
+Enrollment Number : MT2024115
+Description : Write a simple program to print the created thread ids.
+output :Thread ID: 139791664412352
+        Thread ID: 139791647626944
+        Thread ID: 139791656019648
+        All threads have finished
+
+============================================================================
+*/
+
 #include <stdio.h>
 #include <pthread.h>
 #include <unistd.h>
